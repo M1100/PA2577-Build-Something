@@ -1,0 +1,24 @@
+<!-- nav -->
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+  <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="/" routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: true}">Home</a>
+      <a class="nav-item nav-link" routerLink="/register" routerLinkActive="active">Register</a>
+      <a class="nav-item nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+      <a class="nav-item nav-link" routerLink="/review" routerLinkActive="active">Add Review</a>
+      <a class="nav-item nav-link" routerLink="/comment" routerLinkActive="active">Reviews</a>
+  </div>
+</nav>
+
+<!-- main app container -->
+<div class="app-container bg-light">
+  <alert></alert>
+  <router-outlet></router-outlet>
+</div>
+
+<!-- credits -->
+<div class="text-center mt-4">
+  <p>
+      Create by Mostafa Abdelmeguid for Cloud Computing and Big Data BTH course assignment
+  </p>
+</div>

@@ -1,0 +1,21 @@
+<!-- Using Bootstrap card for each review -->
+<div class="container mt-3">
+  <div *ngFor="let review of reviews" class="card mb-2">
+    <div class="card-body">
+      <h5 class="card-title">{{ review.bookTitle }}</h5>
+      <p class="card-text">{{ review.reviewText }}</p>
+      <button class="btn btn-outline-primary" (click)="selectReview(review._id)">Comment on this review</button>
+    </div>
+  </div>
+
+  <!-- Comment form with Bootstrap styling -->
+  <div *ngIf="selectedReviewId" class="mt-4">
+    <h3>Leave a Comment</h3>
+    <form [formGroup]="commentFormGroup" (ngSubmit)="handlePostComment()" class="mb-3">
+      <div class="form-group">
+        <textarea formControlName="commentText" class="form-control" rows="3" placeholder="Write your comment"></textarea>
+      </div>
+      <button type="submit" class="btn btn-success">Post Comment</button>
+    </form>
+  </div>
+</div>

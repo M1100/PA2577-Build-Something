@@ -1,0 +1,14 @@
+<form [formGroup]="registerFormGroup" (ngSubmit)="handleRegister()">
+  <div class="container">
+    <div class="card card-container" style="background-color: inherit; border: inherit;">
+      <p id="profile-name" class="profile-name-card"></p>
+        <span id="reauth-email" class="reauth-email"></span>
+        <input type="text" formControlName="username" id="inputEmail" class="form-control" placeholder="user name"
+          required autofocus>
+        <input type="password" id="inputPassword" formControlName="password" class="form-control" placeholder="Password"
+          required>
+        <div></div>
+        <button class="btn btn-lg btn-primary btn-block btn-signin" style="margin-top: 50px;" type="submit">Register</button>
+    </div>
+  </div>
+</form>
